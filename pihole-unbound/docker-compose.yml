@@ -2,8 +2,6 @@
 # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 # Unbound info at https://unbound.docs.nlnetlabs.nl/
 
-version: '3.8'
-
 networks:
   pihole_network:
     driver: bridge
