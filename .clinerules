@@ -1,0 +1,6 @@
+[rule]
+# URLs das documentações AWS para consultas prioritárias
+documentation_urls = https://nextcloud.com/, https://pi-hole.net/, https://code.visualstudio.com/docs/remote/vscode-server, https://developers.cloudflare.com/
+
+# Contexto e instruções específicas do projeto
+context_notes = "Sempre use documentação oficial. Mantenha consistência na nomenclatura e tags dos recursos. Sempre adicione healcheck. Todos os comentarios de codigos e descricoes deverao estar em ingles"
