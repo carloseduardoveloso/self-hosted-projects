@@ -1,0 +1,297 @@
+# ~/homer/assets/config.yml
+# fab icons https://fontawesome.com/search?o=r&m=free
+# icons https://github.com/NX211/homer-icons
+title: "Dashboard"
+subtitle: "local.caduveloso.com"
+logo: "logo.png"
+theme: "default"
+columns: "4"
+links:
+  - name: "Contribute"
+    icon: "fab fa-github"
+    url: "https://github.com/bastienwirtz/homer"
+    target: "_blank"
+
+  - name: "Wiki"
+    icon: "fas fa-book"
+    url: "https://www.wikipedia.org/"
+    target: "_blank"
+
+  - name: "Google"
+    url: "https://www.google.com"
+    icon: "fa-brands fa-google"
+    target: "_blank"
+
+  - name: "GitHub"
+    url: "https://github.com"
+    icon: "fab fa-github"
+    target: "_blank"
+
+  - name: "Youtube"
+    url: "https://youtube.com"
+    icon: "fab fa-youtube"
+    target: "_blank"
+
+  - name: "Perplexity IA"
+    url: "https://www.perplexity.ai/"
+    icon: "fab fa-heart"
+    target: "_blank"
+
+  - name: "Chat GPT"
+    url: "https://chatgpt.com/"
+    icon: "fa-solid fa-ghost"
+    target: "_blank"
+
+services:
+  - name: "Network & Security"
+    icon: "fas fa-shield-alt"
+    items:
+      - name: "PiHole"
+        logo: "https://github.com/NX211/homer-icons/raw/master/png/pihole.png"
+        url: "http://192.168.15.22/admin/login"
+        subtitle: "Open Source Ad Blocker."
+
+      # - name: "PiHole - Failover"
+      #   logo: "https://github.com/NX211/homer-icons/raw/master/png/pihole.png"
+      #   url: "http://dnsfailover.local.caduveloso.com"
+      #   subtitle: "Open Source Ad Blocker - Failover."
+
+      - name: "CloudFlare"
+        logo: "https://dash.cloudflare.com/favicon.ico"
+        url: "https://dash.cloudflare.com/98e7f3042a4beb907c2bc4aff7bc4c71/caduveloso.com"
+        subtitle: "Cloudflare Console."
+
+      - name: "CloudFlare Zero Trust"
+        logo: "https://one.dash.cloudflare.com/assets/favicon.ico"
+        url: "https://one.dash.cloudflare.com/98e7f3042a4beb907c2bc4aff7bc4c71/home?tab=24h"
+        subtitle: "Cloudflare Zero Trust Console."
+   
+      - name: "Vivo"
+        logo: "https://vivo.com.br/content/dam/vivo-sites/vivo-com-br/favicon.ico"
+        url: "http://vivo.local.caduveloso.com"
+        subtitle: "Vivo Router."
+
+  - name: "Deploying & Monitoring"
+    icon: "fas fa-chart-line"
+    items:
+      - name: "Uptime-Kuma"
+        logo: "https://uptime.kuma.pet/img/icon.svg"
+        url: "https://uptimekuma.caduveloso.com/"
+        subtitle: "A fancy self-hosted monitoring tool."
+
+      # - name: "Grafana"
+      #   logo: "https://github.com/NX211/homer-icons/raw/master/png/grafana.png"
+      #   url: "https://grafana.local.caduveloso.com"
+      #   subtitle: "Analytics & monitoring solution."
+
+      # - name: "Prometheus"
+      #   logo: "https://prometheus.io/assets/favicons/apple-touch-icon-180x180.png"
+      #   url: "https://prometheus.local.caduveloso.com"
+      #   subtitle: "ower your metrics and alerting with the leading open-source monitoring solution."
+
+      # - name: "Netdata"
+      #   logo: "https://www.netdata.cloud/favicon-32x32.png"
+      #   url: "https://app.netdata.cloud"
+      #   subtitle: "Distributed real-time, health monitoring platform for systems, hardware, containers & applications, collecting metrics."
+
+      # - name: "Open Speed Test"
+      #   logo: "https://open.cachefly.net/assets/images/icons/favicon-32x32.png"
+      #   url: "https://openspeedtest.local.caduveloso.com"
+      #   subtitle: "The most accurate and powerful network speed test tool."
+
+  # - name: "Kubernetes"
+  #   icon: "fas fa-code"
+  #   items:
+  #     - name: "Longhorn"
+  #       logo: "https://longhorn.io/favicon.png"
+  #       url: "https://longhorn.local.caduveloso.com"
+  #       subtitle: "Cloud native distributed block storage for Kubernetes."
+
+  #     - name: "ArgoCD"
+  #       logo: "https://argo-cd.readthedocs.io/en/stable/assets/logo.png"
+  #       url: "https://argocd.local.caduveloso.com"
+  #       subtitle: "GitOps continuous delivery tool for Kubernetes."
+
+      # - name: "VsCode"
+      #   logo: "https://code.visualstudio.com/favicon.ico"
+      #   url: "http://vscode.local.caduveloso.com"
+      #   subtitle: "Self-hosted vscode." 
+
+      # - name: "Gitea"
+      #   logo: "https://about.gitea.com/gitea.svg"
+      #   url: "http://gitea.local.caduveloso.com"
+      #   subtitle: "Self-hosted software development service."
+
+      # - name: "Traefik Dashboard"
+      #   logo: "https://doc.traefik.io/traefik/assets/img/traefikproxy-icon-color.png"
+      #   url: "https://traefik.local.caduveloso.com"
+      #   subtitle: "An open-source Application Proxy that makes publishing your services a fun and easy experience."
+
+  - name: "Storage Solutions"
+    icon: "fas fa-hdd"
+    items:
+      - name: "Next Cloud"
+        logo: "https://nextcloud.com/c/uploads/2022/03/favicon.png" 
+        url: "https://nextcloud.caduveloso.com"
+        subtitle: "Content collaboration platform." 
+
+      - name: "Portainer"
+        logo: "https://cdn.prod.website-files.com/685ddfde8f36a9682093fa2b/685ddfde8f36a9682093fad7_Portainer-favicon_v2.jpg" 
+        url: "https://192.168.15.22:9443"
+        subtitle: "Dcoker management" 
+
+      # - name: "VaultWarden"
+      #   logo: "https://www.vaultwarden.net/assets/images/vw-logo-icon.png" 
+      #   url: "https://vaultwarden.local.caduveloso.com"
+      #   subtitle: "The community driven password manager."
+
+  - name: "Media Management & File Sharing"
+    icon: "fas fa-film"
+    items:
+      - name: "qBittorrent"
+        logo: "https://www.qbittorrent.org/favicon.svg"
+        url: "https://qbittorrent.local.caduveloso.com"
+        subtitle: "Client qBittorrent."
+
+      - name: "MeTube" 
+        logo: "https://www.youtube.com/s/desktop/b517a508/img/favicon_144x144.png" 
+        url: "https://metube.local.caduveloso.com"
+        subtitle: "Download Youtube Content."
+
+  # - name: "Apps"
+  #   icon: "fa-brands fa-medapps"
+  #   items:
+  #     - name: "PgAdmin"sudo
+  #       logo: "https://www.pgadmin.org/static/COMPILED/assets/img/favicon.ico"
+  #       url: "https://pgadmin.local.caduveloso.com"
+  #       subtitle: "Most popular and feature rich Open Source administration and development platform for PostgreSQL."
+
+  #     - name: "Draw.io"
+  #       logo: "https://app.diagrams.net/favicon.ico"
+  #       url: "https://drawio.local.caduveloso.com"
+  #       subtitle: "Free online diagram software for making flowcharts, process diagrams, org charts, UML, ER and network diagrams."
+
+
+# TODO APPS FOR DEPLOY
+
+      # - name: "WatchYourLAN"
+      #   logo: "https://getumbrel.github.io/umbrel-apps-gallery/watch-your-lan/icon.svg"
+      #   url: "http://wyl.local.caduveloso.com"
+      #   subtitle: "Lightweight network IP scanner." #https://github.com/aceberg/WatchYourLAN?tab=readme-ov-file
+
+      # - name: "Bitwarden"
+      #   logo: "https://bitwarden.com/favicon-32x32.png?v=1abf57d1154002a9fac426a2c5c04d85" 
+      #   url: "http://bitwarden.local.caduveloso.com"
+      #   subtitle: "Password management solution."
+
+      # - name: "Radarr" 
+      #   logo: "https://avatars.githubusercontent.com/u/25025331?s=200&v=4" 
+      #   url: "http://radarr.local.caduveloso.com" 
+      #   subtitle: "Movie organizer/manager." 
+
+      # - name: "Audiobookshelf" 
+      #   logo: "https://www.audiobookshelf.org/favicon.ico" 
+      #   url: "http://audiobookshelf.local.caduveloso.com"
+      #   subtitle: "open-source self-hosted media server for your audiobooks and podcasts." 
+
+  # - name: "Productivity & Organization Tools"
+  #   icon: "fas fa-tasks "
+  #   items:
+      #     - name: "AppFlowy"
+      #       logo: "https://appflowy.io/_next/static/media/appflowy.787c1f1e.svg"
+      #       url: "http://appflowy.local.caduveloso.com"
+      #       subtitle: "The AI workspace where you achieve more without losing control of your data" 
+
+      #     - name: "FusionAuth"
+      #       logo: "https://cdn.prod.website-files.com/617b1b1f42c1da41aeae3413/63ed72f489abde69118f4631_favicon.png"
+      #       url: "http://fusionauth.local.caduveloso.com"
+      #       subtitle: "Secure, powerful, and flexible auth that developers love" #https://fusionauth.io/
+            
+      #     - name: "searxng"
+      #       logo: "https://searx.space/favicon.svg"
+      #       url: "http://searxng.local.caduveloso.com"
+      #       subtitle: "Free internet metasearch engine which aggregates results from various search services and databases." #https://github.com/searxng/searxng
+
+      #     - name: "Open Web Ui"
+      #       logo: "https://openwebui.com/favicon.png"
+      #       url: "http://openwebui.local.caduveloso.com"
+      #       subtitle: "Extensible, self-hosted interface for AI that adapts to your workflow, all while operating entirely offline."
+
+      #     - name: "Kasm"
+      #       logo: "https://www.kasmweb.com/assets/fav/favicon-32x32.png"
+      #       url: "http://kasm.local.caduveloso.com"
+      #       subtitle: "Stream your workspace directly to your web browser on any device and from any location." #https://www.kasmweb.com/
+
+      #     - name: "N8n.io"
+      #       logo: "https://n8n.io/favicon.ico"
+      #       url: "http://n8n.local.caduveloso.com"
+      #       subtitle: "The world's most popular workflow automation platform for technical teams"
+
+      #     - name: "AWX"
+      #       logo: "https://raw.githubusercontent.com/ansible/awx-logos/master/awx/ui/client/assets/logo-login.svg?sanitize=true"
+      #       url: "http://awx.local.caduveloso.com"
+      #       subtitle: "Ansible awx server"
+
+      # - name: "Office"
+      #   icon: "fa-solid fa-print"
+      #   items:
+      #     - name: "Stirling-PDF"
+      #       logo: "https://avatars.githubusercontent.com/u/77850077?v=4&size=40"
+      #       url: "http://stirling.local.caduveloso.com"
+      #       subtitle: "This is a robust, locally hosted web-based PDF manipulation tool"
+      #
+      #     - name: "Kimai"
+      #       logo: "https://www.kimai.org/favicon.ico"
+      #       url: "http://kimai.local.caduveloso.com"
+      #       subtitle: "Time Management for Project-Oriented Teams."
+      #
+      #     - name: "Firefly III"
+      #       logo: "https://www.firefly-iii.org/assets/favicon/favicon-32x32.png"
+      #       url: "http://firefly.local.caduveloso.com"
+      #       subtitle: "A free and open source personal finance manager"
+      #
+      #     - name: "Vikunja"
+      #       logo: "https://vikunja.io/favicon.svg"
+      #       url: "http://vikunja.local.caduveloso.com"
+      #       subtitle: "The fluffy, open-source, self-hostable to-do app." #https://vikunja.io/
+      #
+      # - name: "File Browser Downloads"
+      #   logo: "https://1513098801-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/spaces%2F-M8KDxOujDoPpJyJJ5_i%2Favatar-1590579241040.png?generation=1590579241552005&alt=media" 
+      #   url: "http://filebrowser.local.caduveloso.com"
+      #   subtitle: "The community driven password manager."
+      #
+      # - name: "Immich" 
+      #   logo: "https://immich.app/img/favicon.png" 
+      #   url: "http://immich.local.caduveloso.com" 
+      #   subtitle: "Self-hosted photo and video management solution" 
+      #
+      # - name: "MinIo" 
+      #   logo: "https://min.io/resources/favs/favicon-96x96.png" 
+      #   url: "http://minio.local.caduveloso.com"
+      #   subtitle: "high-performance, S3 compatible object storage."
+      #
+      # - name: "Droppy" 
+      #   logo: "https://www.droppyjs.com/images/droppy.png" 
+      #   url: "http://droppy.local.caduveloso.com" 
+      #   subtitle: "Self-hosted file storage server." 
+
+
+      # - name: "Harvester HCI"
+      #   logo: "https://harvesterhci.io/img/favicon.ico"
+      #   url: "http://harvesterhci.local.caduveloso.com"
+      #   subtitle: "Open-source hyperconverged infrastructure solution for a cloud-native world."
+
+      # - name: "Rancher"
+      #   logo: "https://ranchermanager.docs.rancher.com/img/favicon.png"
+      #   url: "https://rancher.local.caduveloso.com"
+      #   subtitle: "Open-source multi-cluster orchestration platform, lets operations teams deploy, manage and secure enterprise Kubernetes."
+
+      # - name: "Hasura"
+      #   logo: "https://res.cloudinary.com/dh8fp23nd/image/upload/v1687352664/v3-website/favicon_y4jpfl.png"
+      #   url: "http://hasura.local.caduveloso.com"
+      #   subtitle: "Build and operate robust APIs."
+
+      # - name: "It-Tools"
+      #   logo: "https://it-tools.tech/favicon-32x32.png"
+      #   url: "http://it-tools.local.caduveloso.com"
+      #   subtitle: "Useful tools for developer and people working in IT."

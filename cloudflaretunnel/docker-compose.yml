@@ -1,0 +1,14 @@
+services:
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    environment:
+      - TZ=${TZ}
+    # healthcheck:
+    #   test: ["CMD", "cloudflared", "tunnel", "info", "${CLOUDFLARE_TUNNEL_TOKEN}"]
+    #   interval: 60s
+    #   timeout: 30s
+    #   retries: 3
+    #   start_period: 30s
