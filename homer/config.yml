@@ -2,7 +2,7 @@
 # fab icons https://fontawesome.com/search?o=r&m=free
 # icons https://github.com/NX211/homer-icons
 title: "Dashboard"
-subtitle: "local.caduveloso.com"
+subtitle: "caduveloso.com"
 logo: "logo.png"
 theme: "default"
 columns: "4"
@@ -48,7 +48,7 @@ services:
     items:
       - name: "PiHole"
         logo: "https://github.com/NX211/homer-icons/raw/master/png/pihole.png"
-        url: "http://192.168.15.22/admin/login"
+        url: "http://pihole.caduveloso.com"
         subtitle: "Open Source Ad Blocker."
 
       # - name: "PiHole - Failover"
@@ -66,10 +66,33 @@ services:
         url: "https://one.dash.cloudflare.com/98e7f3042a4beb907c2bc4aff7bc4c71/home?tab=24h"
         subtitle: "Cloudflare Zero Trust Console."
    
-      - name: "Vivo"
-        logo: "https://vivo.com.br/content/dam/vivo-sites/vivo-com-br/favicon.ico"
-        url: "http://vivo.local.caduveloso.com"
-        subtitle: "Vivo Router."
+      # - name: "Vivo"
+      #   logo: "https://vivo.com.br/content/dam/vivo-sites/vivo-com-br/favicon.ico"
+      #   url: "http://vivo.local.caduveloso.com"
+      #   subtitle: "Vivo Router."
+
+  - name: "Aapplications"
+    icon: "fas fa-hdd"
+    items:
+      - name: "VsCode"
+        logo: "https://code.visualstudio.com/assets/favicon.ico" 
+        url: "https://vscodeserver.caduveloso.com"
+        subtitle: "VsCode server" 
+
+      - name: "Next Cloud"
+        logo: "https://nextcloud.com/c/uploads/2022/03/favicon.png" 
+        url: "https://nextcloud.caduveloso.com"
+        subtitle: "Content collaboration platform." 
+
+      - name: "Portainer"
+        logo: "https://cdn.prod.website-files.com/685ddfde8f36a9682093fa2b/685ddfde8f36a9682093fad7_Portainer-favicon_v2.jpg" 
+        url: "https://192.168.15.22:9443"
+        subtitle: "Docker management console" 
+
+      # - name: "VaultWarden"
+      #   logo: "https://www.vaultwarden.net/assets/images/vw-logo-icon.png" 
+      #   url: "https://vaultwarden.local.caduveloso.com"
+      #   subtitle: "The community driven password manager."
 
   - name: "Deploying & Monitoring"
     icon: "fas fa-chart-line"
@@ -79,10 +102,10 @@ services:
         url: "https://uptimekuma.caduveloso.com/"
         subtitle: "A fancy self-hosted monitoring tool."
 
-      # - name: "Grafana"
-      #   logo: "https://github.com/NX211/homer-icons/raw/master/png/grafana.png"
-      #   url: "https://grafana.local.caduveloso.com"
-      #   subtitle: "Analytics & monitoring solution."
+      - name: "Grafana"
+        logo: "https://github.com/NX211/homer-icons/raw/master/png/grafana.png"
+        url: "https://grafana.caduveloso.com"
+        subtitle: "Analytics & monitoring solution."
 
       # - name: "Prometheus"
       #   logo: "https://prometheus.io/assets/favicons/apple-touch-icon-180x180.png"
@@ -127,35 +150,18 @@ services:
       #   url: "https://traefik.local.caduveloso.com"
       #   subtitle: "An open-source Application Proxy that makes publishing your services a fun and easy experience."
 
-  - name: "Storage Solutions"
-    icon: "fas fa-hdd"
-    items:
-      - name: "Next Cloud"
-        logo: "https://nextcloud.com/c/uploads/2022/03/favicon.png" 
-        url: "https://nextcloud.caduveloso.com"
-        subtitle: "Content collaboration platform." 
-
-      - name: "Portainer"
-        logo: "https://cdn.prod.website-files.com/685ddfde8f36a9682093fa2b/685ddfde8f36a9682093fad7_Portainer-favicon_v2.jpg" 
-        url: "https://192.168.15.22:9443"
-        subtitle: "Dcoker management" 
-
-      # - name: "VaultWarden"
-      #   logo: "https://www.vaultwarden.net/assets/images/vw-logo-icon.png" 
-      #   url: "https://vaultwarden.local.caduveloso.com"
-      #   subtitle: "The community driven password manager."
 
   - name: "Media Management & File Sharing"
     icon: "fas fa-film"
     items:
       - name: "qBittorrent"
         logo: "https://www.qbittorrent.org/favicon.svg"
-        url: "https://qbittorrent.local.caduveloso.com"
+        url: "https://qbittorrent.caduveloso.com"
         subtitle: "Client qBittorrent."
 
       - name: "MeTube" 
         logo: "https://www.youtube.com/s/desktop/b517a508/img/favicon_144x144.png" 
-        url: "https://metube.local.caduveloso.com"
+        url: "https://metube.caduveloso.com"
         subtitle: "Download Youtube Content."
 
   # - name: "Apps"

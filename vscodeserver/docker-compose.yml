@@ -1,0 +1,33 @@
+# VS Code Server Docker Compose Configuration
+# More info at https://code.visualstudio.com/docs/remote/vscode-server
+services:
+
+  vscodeserver:
+    image: codercom/code-server:latest
+    container_name: vscodeserver
+    hostname: vscodeserver
+    restart: unless-stopped
+    ports:
+      - "8443:8080"
+    environment:
+      - TZ=${TZ}
+      - PASSWORD=${VSCODE_PASSWORD}
+      - SUDO_PASSWORD=${VSCODE_SUDO_PASSWORD}
+      - DEFAULT_WORKSPACE=/home/coder/workspace
+    volumes:
+      - './data/config:/home/coder/.config'
+      - './data/workspace:/home/coder/workspace'
+      - './data/extensions:/home/coder/.local/share/code-server'
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    user: "1000:1000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

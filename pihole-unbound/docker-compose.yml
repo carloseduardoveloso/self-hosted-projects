@@ -7,8 +7,6 @@ services:
     image: klutchell/unbound:latest
     container_name: unbound
     hostname: unbound
-    networks:
-      - backend
     environment:
       TZ: ${TZ}
     volumes:
@@ -33,9 +31,6 @@ services:
     depends_on:
       unbound:
         condition: service_healthy
-    networks:
-      - frontend
-      - backend
     ports:
       - "53:53/tcp"
       - "53:53/udp"
@@ -62,9 +57,37 @@ services:
         max-size: "10m"
         max-file: "3"
 
+  pihole-exporter:
+    build:
+      context: ./pihole6-exporter
+    container_name: pihole-exporter
+    hostname: pihole-exporter
+    depends_on:
+      pihole:
+        condition: service_started
+    ports:
+      - "9666:9666"
+    environment:
+      - TZ=${TZ}
+      - PIHOLE_APP_PASSWORD=${PIHOLE_APP_PASSWORD}
+    command:
+      - pihole6_exporter
+      - -H
+      - pihole
+      - -k
+      - ${PIHOLE_APP_PASSWORD}
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://192.168.15.22:9666/metrics"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
 networks:
   frontend:
     driver: bridge
   backend:
     driver: bridge
-    internal: true
+    external: true
+    name: pihole-unbound_backend
