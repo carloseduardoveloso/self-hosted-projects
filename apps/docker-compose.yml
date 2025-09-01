@@ -27,3 +27,71 @@ services:
     volumes:
       - /data/qbittorrent/config:/config
       - /data/qbittorrent/downloads:/downloads
+
+  openspeedtest:
+    image: openspeedtest/latest:latest
+    container_name: openspeedtest
+    hostname: openspeedtest
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    environment:
+      - TZ=${TZ}
+      - DB_TYPE=mysql
+      - DB_HOST=${MYSQL_HOST}
+      - DB_PORT=${MYSQL_PORT}
+      - DB_NAME=${OPENSPEEDTEST_DB_NAME}
+      - DB_USER=${OPENSPEEDTEST_DB_USER}
+      - DB_PASSWORD=${OPENSPEEDTEST_DB_PASSWORD}
+      - ENABLE_DATABASE_LOG=true
+    volumes:
+      - ./data/openspeedtest:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  openspeedtest-scheduler:
+    build: ./openspeedtest-scheduler
+    container_name: openspeedtest-scheduler
+    hostname: openspeedtest-scheduler
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_PORT: ${MYSQL_PORT}
+      OPENSPEEDTEST_DB_NAME: ${OPENSPEEDTEST_DB_NAME}
+      OPENSPEEDTEST_DB_USER: ${OPENSPEEDTEST_DB_USER}
+      OPENSPEEDTEST_DB_PASSWORD: ${OPENSPEEDTEST_DB_PASSWORD}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # speedtest-scheduler:
+  #   build: ./speedtest-scheduler
+  #   container_name: speedtest-scheduler
+  #   hostname: speedtest-scheduler
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - openspeedtest
+  #   environment:
+  #     - TZ=${TZ}
+  #     - MYSQL_HOST=${MYSQL_HOST}
+  #     - MYSQL_PORT=${MYSQL_PORT}
+  #     - OPENSPEEDTEST_DB_NAME=${OPENSPEEDTEST_DB_NAME}
+  #     - OPENSPEEDTEST_DB_USER=${OPENSPEEDTEST_DB_USER}
+  #     - OPENSPEEDTEST_DB_PASSWORD=${OPENSPEEDTEST_DB_PASSWORD}
+  #   logging:
+  #     driver: "json-file"
+  #     options:
+  #       max-size: "10m"
+  #       max-file: "3"
